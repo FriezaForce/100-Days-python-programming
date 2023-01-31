@@ -1,8 +1,8 @@
-import random # For generating random numbers
-import sys #To exit the program
-import pygame #pip install pygame
+import random 
+import sys 
+import pygame 
 from pygame.locals import * 
-# Global Variables for the game
+
 FPS = 32
 SCREENWIDTH = 289
 SCREENHEIGHT = 511
@@ -67,8 +67,8 @@ def mainGame():
     playerMinVelY = -8
     playerAccY = 1
 
-    playerFlapAccv = -8 # velocity while flapping
-    playerFlapped = False # It is true only when the bird is flapping
+    playerFlapAccv = -8 
+    playerFlapped = False 
 
 
     while True:
@@ -83,7 +83,7 @@ def mainGame():
                     GAME_SOUNDS['wing'].play()
 
 
-        crashTest = isCollide(playerx, playery, upperPipes, lowerPipes) # This function will return true if the player is crashed
+        crashTest = isCollide(playerx, playery, upperPipes, lowerPipes) 
         if crashTest:
             return     
 
@@ -177,8 +177,8 @@ def getRandomPipe():
 
 
 if __name__ == "__main__":
-    # This will be the main point from where our game will start
-    pygame.init() # Initialize all pygame's modules
+
+    pygame.init()
     FPSCLOCK = pygame.time.Clock()
     pygame.display.set_caption('Flappy Bird by CodeWithHarry')
     GAME_SPRITES['numbers'] = ( 
